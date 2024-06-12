@@ -1,0 +1,12 @@
+<div class="container text-center pt-5">
+  @if(poem === undefined) {
+  <p>Something went wrong.</p>
+  <p>Try searching for another poem</p>
+  } @else {
+  <p class="m-0 fs-4 fw-semibold">{{ poem.title }}</p>
+  <p class="fw-lighter m-0">By {{ poem.author }}</p>
+  <p class="fw-lighter fst-italic m-0">{{ poem.linecount }} lines</p>
+  @for (line of poem.lines; track $index) {
+  <p>{{ line }}</p>
+  } }
+</div>

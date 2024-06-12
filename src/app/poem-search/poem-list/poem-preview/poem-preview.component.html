@@ -1,0 +1,6 @@
+<div class="d-flex-inline">
+  <a [routerLink]="poemRoute" class="m-0 fs-4 fw-semibold">{{ _poem.title }}</a>
+  <p class="fw-lighter m-0">By {{ _poem.author }}</p>
+  <p class="fw-lighter fst-italic m-0">{{ _poem.linecount }} lines</p>
+  <p>{{ _poem.lines[0].slice(0, 120) }}...</p>
+</div>

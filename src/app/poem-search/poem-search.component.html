@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row text-center pt-5 pb-2">
+    <p>Explore works by your favorite poet!</p>
+  </div>
+  <div class="row justify-content-center pb-5">
+    <div style="max-width: 30rem">
+      <app-search-bar (onSearch)="searchPoems($event)"></app-search-bar>
+    </div>
+    <div class="row justify-content-center pt-5">
+      <div style="max-width: 40rem">
+        @if(isPoemListEmpty) {
+        <p class="text-center">No results. Please search with another term</p>
+        } @else {
+        <app-poem-list [poems]="poems"></app-poem-list>
+        }
+      </div>
+    </div>
+  </div>
+</div>
