@@ -144,6 +144,10 @@ export class PoetryDBService {
   }
 }
 
+/**
+ * Private utility types and functions.
+ */
+
 /** API response when only author name is requested */
 type AuthorResponse = {
   author: string;
